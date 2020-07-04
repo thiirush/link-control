@@ -10,9 +10,10 @@ router.get('/sign-in', (req, res) => {
 });
 
 router.get('/sign-up', async (req, res) => {
-  const email = 'emerson@emersonbroga.com';
-  const password = '123456';
+  const { email, password } = req.body;
 
+  const account = await Account.findOne({ where: { email } });
+  if (account) return res.json('Essa conta já existe');
   const hash = bcrypt.hashSync(password, saltRounds);
   const result = await Account.create({
     email,
