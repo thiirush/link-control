@@ -17,7 +17,7 @@
   "account.signin.invalid": "Credenciais inválidas.",
   "account.signin.email.string.email": "Por favor, informe um e-mail válido.",
   "account.signin.email_exists" : "Email já cadastrado.",
-  "account.signin.sucess" : "Cadastro efetuado com sucesso.",
+  "account.signin.sucess" : "Login autorizado.",
   "account.signin.password.string.pattern.base": "Senha deve conter entre 3 a 30 caracteres.",
   "account.signin.password.string.empty": "O campo senha está vazio, por favor informe uma senha."
 }
