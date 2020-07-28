@@ -1,14 +1,14 @@
-const {getMessage} = require('./messages')
+const { getMessage } = require('./messages');
 
 const getValidatorError = (error, messagePath) => {
   if (!error) return null;
 
   const errorMessages = {};
 
-  error.details.map((detail, index) => {
-    const message = detail.message;
-    const key = detail.context.key;
-    const type = detail.type;
+  error.details.map((detail) => {
+    const { message } = detail;
+    const { key } = detail.context;
+    const { type } = detail;
 
     const path = `${messagePath}.${key}.${type}`;
 
@@ -24,5 +24,5 @@ const getValidatorError = (error, messagePath) => {
 
 module.exports = {
   getValidatorError,
-  getMessage
+  getMessage,
 };

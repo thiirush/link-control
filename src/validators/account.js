@@ -50,8 +50,8 @@ const accountSignIn = (req, res,next) =>{
 
 
   if (error) {
-    const messages = getValidatorError(error, 'account.signin');
-    return res.jsonBadRequest(null, null, { messages });
+    const messages = getValidatorError(error, 'account.signin')
+    return res.jsonBadRequest(null, null, { messages })
   }
 
   next()
